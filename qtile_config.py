@@ -35,6 +35,8 @@ mod = "mod1"
 terminal = guess_terminal()
 
 keys = [
+    Key([], "Print", lazy.spawn("~/bin/screenshot")),
+
     # Switch between windows
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
@@ -129,6 +131,8 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
+        wallpaper='/home/thorgeir/git/hub/thorgeir/wallpapers/dark_gray_grainy_texture.jpg',
+        wallpaper_mode='stretch',
         bottom=bar.Bar(
             [
                 widget.CurrentLayout(),
